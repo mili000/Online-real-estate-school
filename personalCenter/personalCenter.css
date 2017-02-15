@@ -1,0 +1,211 @@
+body{
+    background-color: #F5F5F5;
+}
+/*用户签到条*/
+.hello{
+    background:url("../img/personalCenter/bg1.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    min-width: 1190px;
+    margin-top: 40px;
+}
+.hello .head{
+    width: 74px;
+    height: 76px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0 0 200px;
+    float: left;
+}
+.hello .user {
+    font-size: 14px;
+    color: #fff;
+    float: left;
+    padding: 35px 0 0 25px;
+}
+.hello #score{
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    padding: 35px 0 0 80px;
+}
+.hello #checkIn{
+    text-align: center;
+    padding: 7px 0;
+    width: 72px;
+    background-color: #0097ff;
+    color: #fff;
+    float: right;
+    margin: 32px 280px 0 0;
+}
+/*路由*/
+.router{
+    margin: 30px auto;
+    width: 1214px;
+}
+/*左侧路由*/
+.left{
+    background: #fff;
+    border: 1px solid #dfd8d8;
+    width: 210px;
+    float: left;
+}
+.left>li{
+    height: 36px;
+    line-height: 34px;
+}
+.left .classify{
+    color: #0097FE;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.left .classify i{
+    background: url("../img/personalCenter/centerh3icon.png") no-repeat;
+    height: 11px;
+    width: 18px;
+    display: inline-block;
+}
+.left .content a{
+    padding-left: 44px;
+    font-size: 14px;
+    display: inline-block;
+    width: 166px;
+}
+.left .gray{
+    color: #fff;
+    background-color: #666;
+}
+.left .content:hover a{
+    color: #fff;
+    background-color: #666;
+}
+.left .last a{
+    font-size: 14px;
+    color: #0097FE;
+    padding-left: 44px;
+    text-decoration: underline;
+    display: inline-block;
+    width: 166px;
+}
+/*右侧各个路由内容*/
+.right{
+    width: 950px;
+    height: 576px;
+    background-color: #fff;
+    float: left;
+    margin-left: 50px;
+    border: 1px solid #dfd8d8;
+    color: #757575;
+}
+.rightTop{
+    border-bottom: 1px solid #e2dfdf;
+    margin: 30px 15px 0 15px;
+}
+.rightTop>li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.rightTop>li>a{
+    width: 62px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.rightTop>li:hover a{
+    color: #ff9127;
+    border-bottom: 3px solid #ff9127;
+}
+.rightTop .orange{
+    color: #ff9127;
+    border-bottom: 3px solid #ff9127;
+}
+/*路由基本信息*/
+.profile>.note{
+    padding-top: 22px;
+    font-size: 13px;
+    color: #b4b4b4;
+    padding-left: 50px;
+}
+.profile>div:not(:first-child){
+    margin-top: 30px;
+}
+.profile>.user{
+    margin-left: 150px;
+}
+.profile>.userName{
+    margin-left: 200px;
+}
+.profile>.sex{
+    margin-left: 200px;
+}
+.profile>.sex>input{
+    position: relative;
+    top:5px;
+}
+.profile>.really{
+    margin-left: 150px;
+}
+.profile>.birth{
+    margin-left: 200px;
+}
+.profile>.mail{
+    margin-left: 200px;
+}
+.profile>.post{
+    margin-left: 170px;
+}
+.profile>.post>.img{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+}
+.profile>.post>.img>img{
+    width: 100%;
+}
+.profile>.post>.font{
+    width: 100px;
+    height: 28px;
+    background: #0097ff;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 3px;
+    color: #ffffff;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    font-size: 12px;
+}
+.profile>.save{
+    width: 100px;
+    height: 28px;
+    background: #0097ff;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 300px;
+}
+.profile>div>div{
+    margin: 0 10px;
+    float: left;
+}
+.profile>div>input{
+    padding: 3px;
+    float: left;
+}
+.profile>div>label{
+    float: left;
+}
+.profile>div>.note{
+    color: #757575;
+    font-size: 12px;
+}
+#men{
+     margin: 0 10px;
+ }
+#women{
+    margin: 0 10px;
+}

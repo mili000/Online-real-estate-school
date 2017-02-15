@@ -1,0 +1,317 @@
+.row2.course_row2{
+    background: #fff;
+    border-bottom: 3px solid #0097FE;
+}
+.course_row3{
+    min-width: 1190px;
+    height: 803px;
+    width: 100%;
+    background: url('../../img/courses/course_banner.jpg') no-repeat center center;
+    background-size: cover;
+}
+.course_row3 .watch_course{
+    height: 484px;
+    width: 100%;
+    background: url('../../img/courses/watch_Course_bj.png') no-repeat center 50px;
+    position: relative;
+}
+.course_row3 .watch_course p{
+    font-size: 20px;
+    width: 73%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: #4b4b4b;
+    padding-top: 216px;
+}
+.course_row3 .watch_course a input{
+    position: absolute;
+    bottom: 94px;
+    left: 50%;
+    margin-left: -148px;
+    width: 296px;
+    height: 62px;
+    line-height: 62px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1);
+    background: #FF9125;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 26px;
+}
+.course_row3 .course_advantage{
+    min-width: 1190px;
+    height: 319px;
+    background: rgba(0,0,0,0.2);
+}
+.course_row3 .course_advantage ul{
+    clear: both;
+    overflow: hidden;
+    padding: 76px 0 64px 0;
+}
+.course_row3 .course_advantage ul li{
+    margin-left: 0;
+    float: left;
+    padding-top: 112px;
+    text-align: center;
+    width: 25%;
+    background: url('../../img/courses/advantage_icon.png') no-repeat;
+}
+.course_row3 .course_advantage ul li:nth-child(1){
+    background-position: 61px -10px;
+}
+.course_row3 .course_advantage ul li:nth-child(2){
+    background-position: -169px -10px;
+}
+.course_row3 .course_advantage ul li:nth-child(3){
+    background-position: 47px -192px;
+}
+.course_row3 .course_advantage ul li:nth-child(4){
+    background-position: -184px -192px;
+}
+.course_choose{
+    padding-bottom: 44px;
+    text-align: center;
+}
+.course_choose h2{
+    padding: 63px 0 44px 0;
+    font-size: 28px;
+    height: 28px;
+    color: #282722;
+    text-align: center;
+}
+.course_choose .courseList{
+    clear: both;
+    overflow: hidden;
+    margin-left: 1%;
+}
+.course_choose .courseList li{
+    width: 24.6%;
+    text-align: center;
+    margin-right: 0.4%;
+    float: left;
+    height: 216px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.course_choose .courseList li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #49a0ea;
+}
+.course_choose .courseList li a .normal{
+    background: url('../../img/courses/excellent_course_icon1.png') no-repeat center 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.course_choose .courseList li a .normal span{
+    position: absolute;
+    bottom: 28px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.course_choose .courseList li a .active{
+    box-sizing:border-box;
+    padding: 30px 0 28px 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 23px;
+    background: rgb(54, 134, 203);
+    overflow: hidden;
+    transition: all 0.6s linear;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.course_choose .courseList li a .active.ng-hide-add{
+    opacity: 1;
+}
+.course_choose .courseList li a .active.ng-hide-add-active{
+    opacity: 0;
+}
+.course_choose .courseList li a .active.ng-hide-remove{
+    width: 0;
+    height: 0;
+}
+.course_choose .courseList li a .active.ng-hide-remove-active{
+    width: 100%;
+    height: 100%;
+}
+.course_choose .courseList li a .active input{
+    width: 96px;
+    height: 26px;
+    position: absolute;
+    left: 50%;
+    margin-left: -48px;
+    margin-bottom: 22px;
+    border-radius: 13px;
+    background: #ffffff;
+    color: #0097ff;
+    bottom: 0;
+    border: none;
+}
+
+/*底*/
+.bottom{
+    background: #71717b;
+    height: 230px;
+    width: 100%;
+}
+.bottom>div{
+    margin: 0 auto;
+    width: 1190px;
+}
+.bottom div .link{
+    background: #71717b;
+    clear: both;
+    overflow: hidden;
+    height: 200px;
+}
+.bottom div .link .friend{
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    height: 88px;
+    line-height: 34px;
+    border-bottom: 1px dashed #f5f5f5;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.bottom div .link .friend h2{
+    margin-bottom: 14px;
+}
+.bottom div .link .friend>div{
+    width: 100%;
+    position: relative;
+}
+.bottom div .link .friend>div .imgContainer{
+    position: relative;
+    margin: 0 auto;
+    width: 1190px;
+    height: 44px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem{
+    position: absolute;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(1){
+    left:2px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(2){
+    left:134px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(3){
+    left:266px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(4){
+    left:398px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(5){
+    left:530px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(6){
+    left:662px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(7){
+    left:794px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(8){
+    left:926px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(9){
+    left:1058px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(10){
+    left:1190px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(11){
+    left:1322px;
+}
+.bottom div .link .friend>div .imgContainer .imgItem:nth-child(12){
+    left:-130px;
+}
+.bottom div .link .friend>div .pre{
+    left: -9px;
+    top:0;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: 10px 12px;
+    background-color: #fff;
+    color:#000000;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+}
+.bottom div .link .friend>div .next{
+    right: -9px;
+    top:0;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: 10px 12px;
+    background-color: #fff;
+    color:#000000;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+}
+
+.bottom div .link .friend>div .imgContainer .imgItem img{
+    width: 122px;
+    height: 44px;
+}
+.bottom div .link .friend>div .fadeIn{
+    transition: all 1s linear;
+}
+.bottom div .link .join{
+    padding: 14px  0 10px;
+}
+.bottom div .link .join p{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+.bottom div .link .join .joinul{
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 0;
+    position: relative;
+}
+.bottom div .link .join .joinul a{
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10px;
+}
+.bottom div .link .join .joinul a:hover{
+    color: #0097FE;
+}
+.bottom div .link .join .joinul a:not(:first-child){
+    border-left: 1px solid #fff;
+}
+.bottom div .link .join .joinul a:last-child{
+    position: relative;
+}
+.bottom div .link .join .joinul a:last-child span{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -84px;
+}
+.bottom div .link .join .joinul a:last-child span img{
+    display: block;
+}
+.bottom div .link .join .joinul a:last-child:hover span{
+    display: inline-block;
+}
+
+

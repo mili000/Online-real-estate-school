@@ -1,0 +1,42 @@
+<div class="profile">
+    <div class="note">完善个人资料是让别人认识你的第一步</div>
+    <div class="user">登录账号：155****2433</div>
+    <div class="userName clearFix">
+        <div class="uname">昵称:</div>
+        <input type="text">
+        <div class="note">(填写后不可修改)</div>
+    </div>
+    <div class="sex clearFix">
+        <div class="sname">性别:</div>
+        <input type="radio" name="sex" id="men"><label for="men">男</label>
+        <input type="radio" name="sex" id="women"><label for="women">女</label>
+    </div>
+    <div class="really clearFix">
+        <div class="rname">真实姓名:</div>
+        <input type="text">
+        <div class="note">(填写后不可修改)</div>
+    </div>
+    <div class="birth clearFix">
+        <div class="bname">出生日期:</div>
+        <select ng-model="valY"  ng-change="changeY(valY)" id="year">
+            <option value="{{y}}"  ng-repeat="y in arrY track by $index">{{y}}</option>
+        </select>
+        <select ng-model="val" ng-change="change(val)">
+            <option value="{{m}}" ng-repeat="m in arrM track by $index">{{m}}</option>
+        </select>
+        <select>
+            <option value="{{d}}" ng-repeat="d in arrD track by $index">{{d}}</option>
+        </select>
+    </div>
+    <div class="mail clearFix">
+        <div class="mname">邮箱:</div>
+        <input type="text">
+        <div class="note">(填写后不可修改)</div>
+    </div>
+    <div class="post clearFix">
+        <div class="pname">上传头像：</div>
+        <div class="img"><img src="../img/personalCenter/touxiang.png" alt=""></div>
+        <div class="font">上传</div>
+    </div>
+    <div class="save">保存</div>
+</div>
