@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>线上地产学堂</title>
-    <link rel="stylesheet" href="../css/initialize.css"/>
+
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../Swiper-3.3.1/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/initialize.css"/>
     <link rel="stylesheet" href="../index/css/index.css"/>
     <link rel="stylesheet" href="../personalCenter/personalCenter.css"/>
     <link rel="stylesheet" href="../courses/css/courses.css"/>
+    <link rel="stylesheet" href="../model/css/modal.css"/>
 </head>
 <body ng-app="app">
 <nav class="nav1">
-    <div>
+    <div class="container clearFix">
         <ul class="appList clearFix">
             <li><a ui-sref="index">首页</a></li>
-            <li><a href="#/">企业定制</a></li>
-            <li><a href="#/">个人进阶</a></li>
+            <li><a href="javascript:void 0;">企业定制</a></li>
+            <li><a href="javascript:void 0;">个人进阶</a></li>
             <li><a ui-sref="courses">公开课</a></li>
-            <li><a href="#/">地产文库</a></li>
-            <li><a href="#/">专项测评</a></li>
-            <li><a href="#/">app下载</a></li>
+            <li><a href="javascript:void 0;">地产文库</a></li>
+            <li><a href="javascript:void 0;">专项测评</a></li>
+            <li><a href="javascript:void 0;">app下载</a></li>
         </ul>
         <ul class="userList clearFix">
-            <li><a href="#/"></a></li>
+            <li><a href="javascript:void 0;"></a></li>
             <li>
-                <a href="#/">
+                <a href="javascript:void 0;">
                     <i></i>
                 </a>
             </li>
             <li><a ui-sref="personalCenter">登录</a></li>
-            <li><a href="#/">注册</a></li>
-            <li><a href="#/">4008031051</a></li>
+            <li><a href="javascript:void 0;">注册</a></li>
+            <li><a href="javascript:void 0;">4008031051</a></li>
         </ul>
     </div>
 </nav>
@@ -104,6 +108,7 @@
 <script src="../Swiper-3.3.1/dist/js/swiper.min.js"></script>
 <script src="../js/angular.min.js"></script>
 <script src="../js/angular-ui-router.min.js"></script>
+<script src="../js/angular-ui-bootstrap.js"></script>
 <script src="../js/angular-animate-1.5.8.js"></script>
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../app/app.js"></script>
@@ -130,7 +135,7 @@
 <script src="../app/coursesApp/courses.js"></script>
 <script src="../app/coursesApp/coursesCtrl.js"></script>
 <script>
-    if(!window.location.href.split[1]){
+    if(!window.location.href.split('#')[1]){
 	window.location.href=location.href+'/#/';
   }
 </script>

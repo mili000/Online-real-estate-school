@@ -1,5 +1,5 @@
 angular.module('coursesCtrl',[])
-    .controller('coursesCtrl',['$scope',function($scope){
+    .controller('coursesCtrl',['$scope','$modal','$log',function($scope,$modal,$log){
         $scope.showing=false;
         var courseList=document.getElementsByClassName('courseList')[0];
         courseList.onmouseover=function(e){
@@ -27,82 +27,91 @@ angular.module('coursesCtrl',[])
                 e.target.parentNode.parentNode.getElementsByClassName('active')[0].style.display='none';
             }
         };
-        //var imgC=document.getElementsByClassName('imgContainer')[0];
-        //var aDiv=imgC.getElementsByClassName('imgItem');
-        //var pre=document.getElementsByClassName('pre')[0];
-        //var next=document.getElementsByClassName('next')[0];
-        //var arr=[-130,2,134,266,398,530,662,794,926,1058,1190,1322];
-        ////var num;
-        //var timer=setInterval(function(){
-        //    for(var i=0;i<aDiv.length;i++){
-        //        aDiv[i].style.left=aDiv[i].offsetLeft-132+'px';
-        //        if(aDiv[i].offsetLeft<=(-130)){
-        //            aDiv[i].className='imgItem';
-        //            aDiv[i].style.left='1322px';
-        //        }else{
-        //            aDiv[i].className='imgItem fadeIn';
-        //        }
-        //    }
-        //},2000);
-        //pre.onclick=function(e){
-        //    clearInterval(timer);
-        //    for(var i=0;i<aDiv.length;i++){
-        //        aDiv[i].style.left=aDiv[i].offsetLeft+132+'px';
-        //        for(var j=0;j<arr.length;j++){
-        //            if(aDiv[i].offsetLeft-arr[j]>-132&&aDiv[i].offsetLeft-arr[j]<0){
-        //                num=aDiv[j].offsetLeft-arr[j];
-        //                console.log(num);
-        //            }
-        //        }
-        //        if(aDiv[i].offsetLeft>(1190)){
-        //            aDiv[i].className='imgItem';
-        //            aDiv[i].style.left='-262px';
-        //        }else if(aDiv[i].offsetLeft>(1058)){
-        //            aDiv[i].className='imgItem';
-        //            aDiv[i].style.left='-130px';
-        //        }else{
-        //            aDiv[i].className='imgItem fadeIn';
-        //        }
-        //    }
-        //};
-        //pre.onmouseout=function(e){
-        //    //console.log(0);
-        //    clearInterval(timer);
-        //    timer=setInterval(function(){
-        //        for(var i=0;i<aDiv.length;i++){
-        //            aDiv[i].style.left=aDiv[i].offsetLeft+132+'px';
-        //            for(var j=0;j<arr.length;j++){
-        //                if(aDiv[i].offsetLeft-arr[j]>-132&&aDiv[i].offsetLeft-arr[j]<0){
-        //                    num=aDiv[j].offsetLeft-arr[j];
-        //                    //console.log(num);
-        //                }
-        //            }
-        //            if(aDiv[i].offsetLeft<=(-262+num)){
-        //                aDiv[i].className='imgItem';
-        //                aDiv[i].style.left='1322px';
-        //            }else{
-        //                aDiv[i].className='imgItem fadeIn';
-        //            }
-        //        }
-        //    },2000);
-        //}
-        //imgC.onmouseover=function(e){
-        //    clearInterval(timer);
-        //};
-        //imgC.onmouseout=function(e){
-        //    clearInterval(timer);
-        //    timer=setInterval(function(){
-        //        for(var i=0;i<aDiv.length;i++){
-        //            aDiv[i].style.left=aDiv[i].offsetLeft-132+'px';
-        //            if(aDiv[i].offsetLeft<=(-130)){
-        //                aDiv[i].className='imgItem';
-        //                aDiv[i].style.left='1322px';
-        //            }else{
-        //                aDiv[i].className='imgItem fadeIn';
-        //            }
-        //        }
-        //    },2000);
-        //}
+        // list
+        $scope.items = [ 'angularjs', 'backbone', 'canjs', 'Ember', 'react' ];
+        $scope.animationsEnabled=true;
+        // open click
+        $scope.open = function(size) {
+            var modalInstance = $modal.open({
+                animation:$scope.animationsEnabled,
+                templateUrl : '../model/login.html',
+                controller : 'ModalInstanceCtrl', // specify controller for modal
+                backdrop: "true",
+                size : size,
+                resolve : {
+                    items : function() {
+                        return $scope.items;
+                    }
+                }
+            });
+            // modal return result
+            modalInstance.result.then(function(selectedItem) {
+                $scope.selected = selectedItem;
+            }, function() {
+                $log.info('Modal dismissed at: ' + new Date())
+            });
+        }
+    }]).controller('ModalInstanceCtrl2', function($scope, $modalInstance, items) {
 
+    $scope.items = items;
 
-    }]);
+    $scope.selected = {
+        item : $scope.items[1]
+    };
+    // ok click
+    $scope.ok = function() {
+        $modalInstance.close($scope.selected.item);
+    };
+    // cancel click
+    $scope.cancel = function() {
+        $modalInstance.dismiss('cancel');
+    }
+}).directive('draggable', ['$document', function($document) {
+    return function(scope, element, attr) {
+        var startX = 0, startY = 0, x = 0, y = 0,x1= 0,x2=0;
+        element= angular.element(document.getElementsByClassName("modal-dialog"));
+        element.css({
+            //position: 'relative',
+            cursor: 'move'
+        });
+
+        element.on('mousedown', function(event) {
+            // Prevent default dragging of selected content
+            event.preventDefault();
+            startX = event.pageX - x;
+            startY = event.pageY - y;
+            $document.on('mousemove', mousemove);
+            $document.on('mouseup', mouseup);
+
+        });
+
+        function mousemove(event) {
+            y = event.pageY - startY;
+            x = event.pageX - startX;
+            console.log($(window).height());
+            if(x<-($(window).width()/2-180)){
+                x=-($(window).width()/2-180);
+            }
+            if(x>($(window).width()/2-180)){
+                x=$(window).width()/2-180;
+            }
+            if(y<-170){
+                y=-170;
+            }
+            if(y>($(window).height()-430)){
+                y=($(window).height()-430)
+            }
+            element.css({
+                top: y + 'px',
+                left:  x + 'px'
+            });
+        }
+
+        function mouseup() {
+            $document.off('mousemove', mousemove);
+            $document.off('mouseup', mouseup);
+        }
+    };
+}]);
+
+//}]);

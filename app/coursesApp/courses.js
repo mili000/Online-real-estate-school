@@ -1,1 +1,1 @@
-angular.module('coursesApp',['coursesCtrl']);
+angular.module('coursesApp',['ngAnimate','ui.bootstrap','coursesCtrl']);

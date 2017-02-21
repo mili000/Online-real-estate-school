@@ -1,1 +1,1 @@
-angular.module('indexApp',['indexCtrl']);
+angular.module('indexApp',['ngAnimate','ui.bootstrap','indexCtrl']);

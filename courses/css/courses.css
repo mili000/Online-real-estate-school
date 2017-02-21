@@ -183,8 +183,8 @@
     height: 88px;
     line-height: 34px;
     border-bottom: 1px dashed #f5f5f5;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 104px;
 }
 .bottom div .link .friend h2{
     margin-bottom: 14px;
@@ -264,7 +264,6 @@
     line-height: 20px;
     border-radius: 50%;
 }
-
 .bottom div .link .friend>div .imgContainer .imgItem img{
     width: 122px;
     height: 44px;

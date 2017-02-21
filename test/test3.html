@@ -1,0 +1,227 @@
+<html ng-app="app">
+<head>
+
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-ui-bootstrap.js"></script>
+    <link href="../css/bootstrap.css"  rel="stylesheet">
+</head>
+<body>
+<div ng-controller="appController">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3>I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <span>Message:{{message}}</span>
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item=item">{{ item }}</a>
+                    <!--<a ng-click="test(item);">{{ item }}</a>-->
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button class="btn btn-default" ng-click="showModal()">Open me!</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+    <div class="col-xs-6">
+        <div class="well well-sm">I start to learn bootstrap css frow now on!!</div>
+        <div class="well well-lg">I start to learn bootstrap css frow now on!!</div>
+        <div class="well ">I start to learn bootstrap css frow now on!!</div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default panel-primary" >
+            <div class="panel-heading">Panel heading without title</div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default panel-success">
+            <div class="panel-heading">
+                <h1 class="panel-title">Panel title</h1>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Panel title</h1>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+            <div class="panel-footer">Panel footer</div>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+
+            <!-- Table -->
+            <ul class="list-group">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+
+            <!-- Table -->
+            <ul class="list-group">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+
+            <!-- Table -->
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">14</span>
+                    Cras justo odio
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                Cras justo odio
+            </a>
+            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item">Morbi leo risus</a>
+            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item">Vestibulum at eros</a>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+
+        <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Star
+        </button>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>Month</th>
+                    <th>Savings</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>January</td>
+                    <td>$100</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>January</td>
+                    <td>$100</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>January</td>
+                    <td>$100</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>January</td>
+                    <td>$100</td>
+                    <td>$100</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    angular.module('app', ['ui.bootstrap']).
+    service('DataService', ['$rootScope',
+        function($rootScope) {
+            this.data = {};
+            this.data.message = 'This is a message from a service';
+            this.data.items = ['item1', 'item2', 'item3'];
+        }
+    ]).
+    controller('myModal', ['$scope', '$modalInstance', 'DataService',
+        function($scope, $modalInstance, dataService) {
+            $scope.data = dataService.data;
+            $scope.message = dataService.data.message;
+            $scope.items = dataService.data.items;
+
+            $scope.selected = {
+                item: $scope.items[0]
+            };
+            $scope.test = function(item){
+                $scope.selected.item = item;
+            }
+
+            $scope.ok = function() {
+                $modalInstance.close($scope.selected.item);
+            };
+
+            $scope.cancel = function() {
+                $modalInstance.dismiss('cancel');
+            };
+
+        }
+    ]).
+    controller('appController', ['$scope', '$modal', '$log',
+        function($scope, $modal, $log) {
+
+//                    $scope.data = dataService.data;
+
+            $scope.showModal = function() {
+                var modalInstances = $modal.open({
+                    templateUrl: 'myModalContent.html',
+                    controller: 'myModal'
+                });
+
+                modalInstances.result.then(function(selectedItem) {
+                    $scope.selected = selectedItem;
+                },function(){
+                    $log.info('Modal dismissed at :'+new Date())
+                })
+
+            };
+
+        }
+    ]);
+
+</script>
+</html>

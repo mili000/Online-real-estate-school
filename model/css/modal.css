@@ -1,0 +1,136 @@
+.modal-content{
+    border: 0;
+}
+.body{
+    position: relative;
+}
+.login{
+    width: 360px;
+    height: 300px;
+    position: fixed;
+    left:50%;
+    background-color: #fff;
+    /*z-index: 19891018;*/
+    top: 130px;
+    padding: 0 30px 46px;
+    margin: 0  20px 0 -180px;
+    animation-name: bounceIn;
+    box-shadow: 1px 1px 50px rgba(0,0,0,0.3);
+    border-radius: 2px;
+    font-size: 12px;
+}
+@keyframes bounceIn {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*.login a:hover,.login a:active,.login a:focus{*/
+    /*text-decoration: none;*/
+/*}*/
+.login .title{
+    cursor: move;
+    border-bottom: 1px solid #EBE6E2;
+    height: 60px;
+    line-height: 60px;
+}
+.login .title p{
+    font-size: 14px;
+    color: #6c6763;
+}
+.login .content{
+    padding: 0 25px;
+}
+.login .content .tel{
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 10px;
+    padding: 0 10px;
+    color: #c6c6c6;
+}
+.login .content .tel input{
+    color: #666666;
+    border: none;
+    width: 100%;
+    line-height: normal;
+    outline: none;
+}
+.login .content .icode{
+    height: 28px;
+    line-height: 28px;
+    margin-top: 10px;
+}
+.login .content .icode input{
+    border: 1px solid #b6b6b6;
+    padding: 0 10px;
+    border-radius: 3px;
+    height: 28px;
+    width: 54%;
+    color: #666666;
+    outline: none;
+    float: left;
+}
+.login .content .icode button{
+    width: 44%;
+    float: right;
+    height: 28px;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #ff9125;
+    background: -webkit-linear-gradient(#ff9125,#FFA64D,#ff9125);
+    background: -moz-linear-gradient(top,#ff9125,#FFA64D,#ff9125);
+    background: -o-linear-gradient(top,#ff9125,#FFA64D,#ff9125);
+    display: inline-block;
+    text-align: center;
+}
+.login .content .tz{
+    padding:8px 10px 0;
+    height: 28px;
+    line-height: 28px;
+}
+.login .content .tz a{
+    color: #337ab7;
+}
+.login .content .tz a:hover,.login .content .tz a:active,.login .content .tz a:focus{
+    text-decoration: none;
+}
+.login .content .error{
+    color: #e0615b;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 0;
+}
+.login .content .dl{
+    background: #ff9126;
+    text-align: center;
+    border-radius: 3px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+.login .content .bd{
+    height: 28px;
+    line-height: 28px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.login .close{
+    position: absolute;
+    right: 15px;
+    top:5px;
+}
+
+
+
